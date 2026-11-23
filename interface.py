@@ -41,7 +41,7 @@ class MotorIA:
 
         self.model = AutoModelForCausalLM.from_pretrained(
             modelo_base_id,
-            dtype=torch.float32,
+            torch_dtype=torch.float32,
             device_map="cpu",
             low_cpu_mem_usage=True,
         )
